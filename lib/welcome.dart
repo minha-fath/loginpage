@@ -18,8 +18,35 @@ class Welcome extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Center(child: SizedBox(height: 10,)),Image.network("https://cdni.iconscout.com/illustration/premium/thumb/welcome-page-8693993-6983282.png"),
-          
+            Center(child: SizedBox(height: 10)),
+            Image.network(
+              "https://cdni.iconscout.com/illustration/premium/thumb/welcome-page-8693993-6983282.png",
+            ),
+            SizedBox(
+              height: 55,
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Text("Login"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  foregroundColor: Colors.black,
+                  side: BorderSide(color: Colors.black),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 55,
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Text("sign up"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 93, 98, 228),
+                  foregroundColor: Colors.black,side: BorderSide(color: Colors.black),
+                ),
+              ),
+            ),
           ],
         ),
       ),
