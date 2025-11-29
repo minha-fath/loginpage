@@ -39,3 +39,20 @@ UserCredential userCredential = await FirebaseAuth.instance
     );
   }
 }
+Future<void> resetPassword({
+  required String email,
+  required BuildContext context,
+}) async {
+  try {
+  await FirebaseAuth.instance
+        .sendPasswordResetEmail(email: email);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text("Password Reset Email Sent")));
+
+  } catch (e) {
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(e.toString())),
+    );
+  }
+}

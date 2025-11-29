@@ -4,6 +4,7 @@ import 'package:loginpage/sign.dart';
 import 'package:loginpage/welcome.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'package:loginpage/forgot.dart';
 
 void main() async{
   
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Login(),
+      home: Welcome(),
     );
   }
 }

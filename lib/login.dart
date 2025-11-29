@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginpage/forgot.dart';
 import 'package:loginpage/service.dart';
 import 'package:loginpage/sign.dart';
 
@@ -74,6 +75,15 @@ class _LoginState extends State<Login> {
                     borderSide: BorderSide(color: Colors.black),
                   ),
                 ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ForgotPassword()),
+                  );
+                },
+                child: Text( "Forgot Password?", style: TextStyle(color: Colors.blue),),
               ),
               SizedBox(
                 height: 55,
